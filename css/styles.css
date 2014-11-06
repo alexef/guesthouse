@@ -8,3 +8,123 @@
   box-sizing: border-box;
 }
 
+
+/*===================================
+GLOBALS
+===================================*/
+
+body { font-size: 14px; padding: 0; margin: 0; font-family: "lucida grande", tahoma, sans-serif; scolor: #000;  }
+/* Typography */
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 { font-weight: 400; }
+
+h1      { font-size: 42px; text-shadow: 0 0 10px rgba(0,0,0,.8); }
+h1 + p  { font-size: 22px; text-shadow: 0 0 10px rgba(0,0,0,.8); }
+h2      { font-size: 32px; }
+h2 + p  { font-size: 18px; color: #868686; }
+p,
+ul,
+ol { margin: 20px 0; }
+
+p { line-height: 1.4; }
+
+img { max-width: 100%; }
+
+
+/*===================================
+LAYOUT
+===================================*/
+
+.container      { max-width: 960px; margin: 0 auto; position: relative; }
+.band           { padding: 50px 0; text-align: center;  border-bottom: 1px solid #d8d8d8; }
+.half-col       { float: left; width: 51%; }
+.quart-col      { float: left; width: 24%; }
+.cf 					  { margin: 0 auto;  zoom: 1; }
+.cf:before,
+.cf:after 		  { content: ""; display: table; } 
+.cf:after 		  { clear: both; }
+
+/*===================================
+SPECIFICS
+===================================*/
+
+/* Branding */
+#site-header img { margin: 20px 20px 20px 0;  }
+
+/* Nav */
+nav       { font-size: 13px; position: absolute; top: 20px; right: 0; }
+nav ul    { margin-right: -5px; }
+nav ul li { display: inline-block; margin: 0 5px; }
+nav a     { color: #000; text-decoration: none; }
+nav .btn  { background: #ecd203; color: #fff; padding: 5px 10px;}
+
+/* Search */
+#search               { background: #0082cd url(../images/carousel3.png) no-repeat top center; padding: 50px 0; text-align: center; color: #fff; }
+#search form          { background: #fff; padding: 10px; max-width: 735px; margin: 0 auto; font-size: 16px;}
+input[type="text"]    { border: 1px solid #bbb; font-size: 16px; padding: 10px; width: 40%;  }
+input[type="submit"]  { border: 1px solid #bbb; font-size: 16px; padding: 10px; width: 18%; cursor: pointer; background: #008ec1; color: #fff; border: 1px solid #008ec1;  }
+
+/* Destinations */
+.destinations     { background: #f3f3f3; }
+.destinations p   { font-size: 18px; color: #868686; }
+.destination      { display: block; padding: 8px; position: relative; }
+.destination span { position: absolute; display: block; top: 50%; width: 100%; text-align: center; font-size: 24px; color: #fff; text-shadow: 0 0 10px rgba(0,0,0,0.8); margin-top: -12px; }
+
+/* How it Works */
+#how-it-works     { text-align: center; padding: 50px 0; }
+.how-it-works     { margin: 40px auto; }
+.how-it-works li  { display: inline-block; width: 33%; text-align: left; padding: 10px 0 10px 80px; }
+.title            { font-size: 24px; color: #666; display: block; }
+.message          { font-size: 18px; color: #868686; display: block; margin: 5px 0; }
+.explore          { background: url(../images/icon-explore.png) no-repeat top left; }
+.contact          { background: url(../images/icon-contact.png) no-repeat top left; }
+.book             { background: url(../images/icon-book.png) no-repeat top left; }
+
+
+/* Testimonials */
+.testimonials     { background: #f3f3f3; }
+.testimonials li  { float: left; width: 33%; padding: 20px; }
+blockquote        { color: #676968; font-size: 17px; }
+
+/* Site Footer */
+#site-footer { text-align: center; padding: 20px; color: #979797; font-size: 17px;}
+
+
+/* ==============================
+MEDIA QUERIES 
+============================== */
+
+
+@media only screen and (max-width: 900px) {
+  .how-it-works li  { display: block; width: 100%; text-align: center; padding: 80px 10px 20px; }
+  .explore          { background: url(../images/icon-explore.png) no-repeat top center; }
+  .contact          { background: url(../images/icon-contact.png) no-repeat top center; }
+  .book             { background: url(../images/icon-book.png) no-repeat top center; }
+
+}
+
+
+@media only screen and (max-width: 767px) {
+  h1      { font-size: 27px; text-shadow: 0 0 10px rgba(0,0,0,.8); }
+  h1 + p  { font-size: 18px; text-shadow: 0 0 10px rgba(0,0,0,.8); }
+  h2      { font-size: 21px; }
+  h2 + p  { font-size: 14px; color: #868686; }
+  #site-header img { margin: 20px auto;  display: block; }
+  nav { position: relative; top: auto; right: auto; margin: 0 auto;  text-align: center;}
+  .band { padding: 40px 20px; }
+  .half-col,
+  .quart-col        { float: none; width: 100%; display: block; }
+  .testimonials li  { float: none; width: 100%; display: block;  padding: 20px; }
+  #search form              { background: rgba(255,255,255,0.5)}
+  #search { padding: 20px; }
+  input[type="text"],
+  input[type="submit"]  { width: 100%; display: block; margin-bottom: 10px; }
+  input[type="submit"] { margin-bottom: 0; border: 0;}
+  .title            { font-size: 18px; }
+  .message,
+  blockquote          { font-size: 14px; }
+}
