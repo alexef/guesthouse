@@ -63,7 +63,10 @@ nav a     { color: #000; text-decoration: none; }
 nav .btn  { background: #ecd203; color: #fff; padding: 5px 10px;}
 
 /* Search */
-#search               { background: #0082cd url(../images/carousel3.png) no-repeat top center; padding: 50px 0; text-align: center; color: #fff; }
+#search               { background: #0082cd url(../images/carousel1.png) no-repeat top center; padding: 50px 0; text-align: center; color: #fff; position: relative; }
+.arrow                { width: 25px; height: 35px; position: absolute; top: 50%; margin-top: -12px; display: block; cursor: pointer; }
+.left-a               { background: url(../images/arrow-left.png) no-repeat; left: 20px; }
+.right-a              { background: url(../images/arrow-right.png) no-repeat; right: 20px; }
 #search form          { background: #fff; padding: 10px; max-width: 735px; margin: 0 auto; font-size: 16px;}
 input[type="text"]    { border: 1px solid #bbb; font-size: 16px; padding: 10px; width: 40%;  }
 input[type="submit"]  { border: 1px solid #bbb; font-size: 16px; padding: 10px; width: 18%; cursor: pointer; background: #008ec1; color: #fff; border: 1px solid #008ec1;  }
