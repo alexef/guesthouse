@@ -13,7 +13,7 @@
 GLOBALS
 ===================================*/
 
-body { font-size: 14px; padding: 0; margin: 0; font-family: "lucida grande", tahoma, sans-serif; scolor: #000;  }
+body { font-size: 14px; padding: 0; margin: 0; font-family: "lucida grande", tahoma, sans-serif; color: #999;  }
 /* Typography */
 h1,
 h2,
@@ -32,8 +32,14 @@ ol { margin: 20px 0; }
 
 p { line-height: 1.4; }
 
+a { color: #008ec1; text-decoration: none; }
+a:hover { color: #000; text-decoration: underline; }
+
 img { max-width: 100%; }
 
+
+input[type="text"]    { border: 1px solid #bbb; font-size: 16px; padding: 10px; width: 40%;  }
+input[type="submit"]  { border: 1px solid #bbb; font-size: 16px; padding: 10px; width: 18%; cursor: pointer; background: #008ec1; color: #fff; border: 1px solid #008ec1;  }
 
 /*===================================
 LAYOUT
@@ -62,14 +68,17 @@ nav ul li { display: inline-block; margin: 0 5px; }
 nav a     { color: #000; text-decoration: none; }
 nav .btn  { background: #ecd203; color: #fff; padding: 5px 10px;}
 
+/* Page Header Strip */
+#header-strip         { background: #0082cd url(../images/carousel1.png) no-repeat top center; padding: 100px 0; text-align: center; color: #fff; position: relative; }
+
+
 /* Search */
 #search               { background: #0082cd url(../images/carousel1.png) no-repeat top center; padding: 50px 0; text-align: center; color: #fff; position: relative; }
 .arrow                { width: 25px; height: 35px; position: absolute; top: 50%; margin-top: -12px; display: block; cursor: pointer; }
 .left-a               { background: url(../images/arrow-left.png) no-repeat; left: 20px; }
 .right-a              { background: url(../images/arrow-right.png) no-repeat; right: 20px; }
 #search form          { background: #fff; padding: 10px; max-width: 735px; margin: 0 auto; font-size: 16px;}
-input[type="text"]    { border: 1px solid #bbb; font-size: 16px; padding: 10px; width: 40%;  }
-input[type="submit"]  { border: 1px solid #bbb; font-size: 16px; padding: 10px; width: 18%; cursor: pointer; background: #008ec1; color: #fff; border: 1px solid #008ec1;  }
+
 
 /* Destinations */
 .destinations     { background: #f3f3f3; }
@@ -92,6 +101,12 @@ input[type="submit"]  { border: 1px solid #bbb; font-size: 16px; padding: 10px; 
 .testimonials     { background: #f3f3f3; }
 .testimonials li  { float: left; width: 33%; padding: 20px; }
 blockquote        { color: #676968; font-size: 17px; }
+
+/* Login & Signup */
+.login     { background: #f3f3f3; }
+.login-form { margin: 0 auto; width: 300px; text-align: center;  }
+.login-form input { display: block; width: 100%; margin-bottom: 10px; font-size: 14px;}
+.login-form input[type="submit"] {width: 50%; margin: 10px auto; }
 
 /* Site Footer */
 #site-footer { text-align: center; padding: 20px; color: #979797; font-size: 17px;}
