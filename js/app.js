@@ -1,38 +1,38 @@
-
-$(document).ready(function() {
-
-  var images = ["Carousel1.png", "Carousel2.png", "Carousel3.png"];
-  var leftArrow = $('.left-a');
-  var rightArrow = $('.right-a');
-  var counter = 0;  
-  var currentImage = 0; 
-  
-  function replaceImageLeft() {
-    currentImage--;
-    if (currentImage < 0) {
-      currentImage = images.length-1;
-    }
-    $('#search').fadeTo('slow', 0.3, function() {
-      $(this).css("background-image", 'url(images/' + images[currentImage] + ')');
-    }).fadeTo('slow', 1);
-  }
-  
-  function replaceImageRight() {
-    currentImage++;
-    if (currentImage > images.length-1) {
-      currentImage = 0;
-    }
-    $('#search').fadeTo('slow', 0.3, function() {
-      $(this).css("background-image", 'url(images/' + images[currentImage] + ')');
+function Slideshow(selector, images) {
+  this.images = images;
+  this.counter = 0;
+  this.currentImage = 0;
+  this.replaceDiv = selector;
+  this.replaceLeft = function () {
+    var parent = this;
+    this.currentImage--;
+    if (this.currentImage < 0) { this.currentImage = this.images.length-1; }
+    $(this.replaceDiv).fadeTo('slow', 0.3, function() {
+      $(this).css("background-image", 'url(images/' + parent.images[parent.currentImage] + ')');
     }).fadeTo('slow', 1);
   };
-  
-  setInterval (function() {
-    replaceImageRight();
-  }, 5000);
-  
-  $('body').on("click", '.left-a', replaceImageLeft);
-  $('body').on("click", '.right-a', replaceImageRight);
-  
-});
+  this.replaceRight = function () {
+    var parent = this;
+    this.currentImage++;
+    if (this.currentImage > this.images.length-1) { this.currentImage = 0; }
+    $(this.replaceDiv).fadeTo('slow', 0.3, function() {
+      $(this).css("background-image", 'url(images/' + parent.images[parent.currentImage] + ')');
+    }).fadeTo('slow', 1);
+  };
+  this.start = function () {
+    var parent = this;
+    setInterval(function () {parent.replaceRight();}, 5000)
+  };
+}
 
+$(document).ready( function () {
+  
+  var images = ["Carousel1.png", "Carousel2.png", "Carousel3.png"];
+
+  var slideshow = new Slideshow('#search', images);
+
+  $('body').on("click", '.left-a', function () {slideshow.replaceLeft()});
+  $('body').on("click", '.right-a', function () {slideshow.replaceRight()});
+
+  slideshow.start();
+});
