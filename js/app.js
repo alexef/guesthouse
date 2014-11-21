@@ -31,8 +31,8 @@ $(document).ready(function() {
     replaceImageRight();
   }, 5000);
   
-  leftArrow.on("click", replaceImageLeft);  
-  rightArrow.on("click", replaceImageLeft);  
+  $('body').on("click", '.left-a', replaceImageLeft);
+  $('body').on("click", '.right-a', replaceImageRight);
   
 });
 
