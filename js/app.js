@@ -5,18 +5,18 @@ function Slideshow(selector, images) {
   this.replaceDiv = selector;
   this.replaceLeft = function () {
     var parent = this;
-    this.currentImage--;
-    if (this.currentImage < 0) { this.currentImage = this.images.length-1; }
-    $(this.replaceDiv).fadeTo('slow', 0.3, function() {
-      $(this).css("background-image", 'url(images/' + parent.images[parent.currentImage] + ')');
+    parent.currentImage--;
+    if (parent.currentImage < 0) { parent.currentImage = parent.images.length-1; }
+    $(parent.replaceDiv).fadeTo('slow', 0.3, function() {
+      $(parent).css("background-image", 'url(images/' + parent.images[parent.currentImage] + ')');
     }).fadeTo('slow', 1);
   };
   this.replaceRight = function () {
     var parent = this;
-    this.currentImage++;
-    if (this.currentImage > this.images.length-1) { this.currentImage = 0; }
-    $(this.replaceDiv).fadeTo('slow', 0.3, function() {
-      $(this).css("background-image", 'url(images/' + parent.images[parent.currentImage] + ')');
+    parent.currentImage++;
+    if (parent.currentImage > parent.images.length-1) { parent.currentImage = 0; }
+    $(parent.replaceDiv).fadeTo('slow', 0.3, function() {
+      $(parent).css("background-image", 'url(images/' + parent.images[parent.currentImage] + ')');
     }).fadeTo('slow', 1);
   };
   this.start = function () {
