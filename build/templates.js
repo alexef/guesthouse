@@ -1,0 +1,28 @@
+this["Templates"] = this["Templates"] || {};
+
+this["Templates"]["templates/home.hbs"] = Handlebars.template(function (Handlebars,depth0,helpers,partials,data) {
+  this.compilerInfo = [4,'>= 1.0.0'];
+helpers = this.merge(helpers, Handlebars.helpers); data = data || {};
+  
+
+
+  return "		<!-- SEARCH -->\n		<div id=\"search\">\n		  <div class=\"container\">\n		    <h1>Find a place to stay</h1>\n		    <p>Rent from people in over 34,000 cities and 190 countries</p>\n		    <form>\n		      <input type=\"text\" placeholder=\"Where do you want to\">\n		      <input type=\"text\" placeholder=\"How many\">\n		      <input type=\"submit\" value=\"Search\">\n		    </form>\n		  </div>\n		  <div class=\"arrow left-a\"></div>\n		  <div class=\"arrow right-a\"></div>\n		</div>\n		<!-- /SEARCH -->\n		\n		<!-- TOP DESTINATIONS -->\n		<div class=\"destinations band\">\n		  <div class=\"container\">\n		    <h2>Top Destinations</h2>\n		    <p>Popular destinations recommended for you.</p>\n		    <div class=\"destination-grid cf\">\n		      <div class=\"half-col\">\n		        <a href=\"#\" class=\"destination\"><img src=\"images/destination-new-york.png\" alt=\"New York Skyline\"><span>New York</span></a>\n		      </div>\n		      <div class=\"quart-col\">\n		        <a href=\"#\" class=\"destination\"><img src=\"images/destination-portland.png\" alt=\"Portland\"><span>Portland</span></a>\n		        <a href=\"#\" class=\"destination\"><img src=\"images/destination-vancouver.png\" alt=\"Vancouver\"><span>Vancouver</span></a>\n		      </div>\n		      <div class=\"quart-col\">\n		        <a href=\"#\" class=\"destination\"><img src=\"images/destination-seattle.png\" alt=\"Seattle\"><span>Seattle</span></a>\n		        <a href=\"#\" class=\"destination\"><img src=\"images/destination-toronto.png\" alt=\"Toronto\"><span>Toronto</span></a>\n		      </div>\n		    </div>\n		  </div>\n		</div>\n		<!-- /TOP DESTINATIONS -->\n		\n		\n		<!-- HOW DOES IT WORK -->\n		<div class=\"band\">\n		  <div class=\"container\">\n		    <h2>How does it work?</h2>\n		    <p>Rent unique, local accommodations on any budget, anywhere in the world.</p>\n		    <ul class=\"how-it-works\">\n		      <li class=\"explore\">\n		        <span class=\"title\">Explore</span>\n		        <span class=\"message\">Find the perfect place</span>\n		      </li>\n		      <li class=\"contact\">\n		        <span class=\"title\">Contact</span>\n		        <span class=\"message\">Message hosts</span>\n		      </li>   \n		      <li class=\"book\">\n		        <span class=\"title\">Book</span>\n		        <span class=\"message\">View your itinerary</span>\n		      </li>      \n		    </ul>\n		  </div>\n		</div>\n		<!-- /HOW DOES IT WORK -->\n		\n		<!-- TESTIMONIALS -->\n		<div class=\"testimonials band cf\">\n		  <div class=\"container\">\n		    <h2>We love Guesthouse</h2>\n		    <ul>\n		      <li>\n		        <blockquote>\n		          <img src=\"images/avatar-irina.png\">\n		          <p>\"Spacious and art filled is right! An absolutely great place to stay. The hosts were very accomodating, provided us with band-aids for our blisters from walking and aspirin fro our head-ache from flying.\"</p>\n		          <footer class=\"customer\">Irina</footer>\n		        </blockquote>\n		      </li>\n		      <li>\n		        <blockquote>\n		          <img src=\"images/avatar-raff.png\">\n		          <p>\"What a great place. Absolutely magical. Rick and Nancy are great hosts. take their tips on what to do and see and you'll have an unforgettable time.\"</p>\n		          <footer class=\"customer\">Raff</footer>\n		        </blockquote>\n		      </li>   \n		      <li>\n		        <blockquote>\n		          <img src=\"images/avatar-costin.png\">\n		          <p>\"Location, location, location! Hanneke's place could not be any more central. Highly accessible to everything you could want to do/see in Amsterdam\"</p>\n		          <footer class=\"customer\">Costin</footer>\n		        </blockquote>\n		      </li>      \n		    </ul>\n		  </div>\n		</div>\n		<!-- /TESTIMONIALS -->";
+  });
+
+this["Templates"]["templates/login.hbs"] = Handlebars.template(function (Handlebars,depth0,helpers,partials,data) {
+  this.compilerInfo = [4,'>= 1.0.0'];
+helpers = this.merge(helpers, Handlebars.helpers); data = data || {};
+  
+
+
+  return "<!-- HEADER STRIP -->\n<div id=\"header-strip\">\n  <div class=\"container\">\n    <h1>Login</h1>\n   </div>\n</div>\n<!-- /HEADER STRIP -->\n\n\n<div class=\"band login\">\n	<div class=\"container\">\n		 <form class=\"login-form\">\n    	<input type=\"text\" placeholder=\"Your email address\">\n    	<input type=\"text\" placeholder=\"Your password\">\n    	<input type=\"submit\" value=\"Login\">\n    </form>\n    <p>Don't have an account? <a href=\"#\">Sign up</a>\n	</div>\n</div>";
+  });
+
+this["Templates"]["templates/register.hbs"] = Handlebars.template(function (Handlebars,depth0,helpers,partials,data) {
+  this.compilerInfo = [4,'>= 1.0.0'];
+helpers = this.merge(helpers, Handlebars.helpers); data = data || {};
+  
+
+
+  return "<!-- HEADER STRIP -->\n<div id=\"header-strip\">\n  <div class=\"container\">\n    <h1>Create an account</h1>\n   </div>\n</div>\n<!-- /HEADER STRIP -->\n\n\n<div class=\"band login\">\n	<div class=\"container\">\n		 <form class=\"login-form\">\n    	<input type=\"text\" placeholder=\"Your email address\">\n    	<input type=\"text\" placeholder=\"Your password\">\n    	<input type=\"submit\" value=\"Login\">\n    </form>\n    <p>Got an account already? <a href=\"#\">Log in</a>\n	</div>\n</div>";
+  });
