@@ -34,8 +34,4 @@ module.exports = function(grunt) {
 	grunt.loadNpmTasks('grunt-neuter');
 	grunt.loadNpmTasks('grunt-contrib-watch');
 	grunt.loadNpmTasks('grunt-contrib-handlebars');
-	grunt.registerTask('default', [
-		'handlebars',
-		'watch'
-	]);
 };
