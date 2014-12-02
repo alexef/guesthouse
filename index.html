@@ -15,11 +15,11 @@
 <!-- BRAND AND NAV -->
 <header id="site-header">
   <div class="container">
-    <img class="logo" src="images/Guesthouse-logo.png" alt="Guesthouse">
+    <a href="/"><img class="logo" src="images/Guesthouse-logo.png" alt="Guesthouse"></a>
     <nav>
       <ul>
-        <li><a href="/home" id="nav-login">LOGIN</a></li>
-        <li><a href="#" id="nav-signup">SIGNUP</a></li>
+        <li><a href="/login" id="nav-login">LOGIN</a></li>
+        <li><a href="/register" id="nav-signup">SIGNUP</a></li>
         <li><a href="#" class="btn">List your space</a></li>
       </ul>
     </nav>
@@ -28,11 +28,6 @@
 <!-- /BRAND AND NAV -->
 
 <div id="outlet">
-
-
-
-	
-	
 </div>
 
 <!-- SITE FOOTER -->
@@ -44,36 +39,6 @@
 <!-- /SITE FOOTER -->
 
 <script src="build/guesthouse.js"></script>
-<script>
-	$(document).ready( function () {
-		
-		// Extract the html content from the script having id = "home"
-		var homeHTML =  Templates["templates/home.hbs"]();
-
-		// Set the content of the div having id = "outlet" to value of homeHTML
-		$(".logo").click( function() {
-				$("#outlet").html(homeHTML);
-		}).click();
-		
-		// Extract the html content from the script having id = "login"
-		var loginHTML = Templates["templates/login.hbs"]();
-
-		// Set the content of the div having id = "outlet" to value of homeHTML
-		$("nav").on("click", "#nav-login", function() {
-				$("#outlet").html(loginHTML);
-		});
-		
-		// Extract the html content from the script having id = "login"
-		var signupHTML = Templates["templates/register.hbs"]();
-
-		// Set the content of the div having id = "outlet" to value of homeHTML
-		$("nav").on("click", "#nav-signup", function() {
-			$("#outlet").html(signupHTML);
-		});
-
-
-	});
-</script>
 
 </body>
   
